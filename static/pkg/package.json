@@ -1,0 +1,15 @@
+{
+  "name": "frontend_yew",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "frontend_yew_bg.wasm",
+    "frontend_yew.js",
+    "frontend_yew.d.ts"
+  ],
+  "main": "frontend_yew.js",
+  "types": "frontend_yew.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}

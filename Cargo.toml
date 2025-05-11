@@ -1,0 +1,33 @@
+[package]
+name = "data_viz"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Web Framework
+axum = "0.7"
+tokio = { version = "1", features = ["full"] } # Use full features for simplicity for now
+tower-http = { version = "0.5", features = ["fs", "trace"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Database
+diesel = { version = "2.1.0", features = ["postgres", "r2d2", "chrono", "numeric"] }
+r2d2 = "0.8.10"
+dotenv = "0.15.0"
+chrono = { version = "0.4", features = ["serde"] }
+
+# Plotting (Client-side) - No Rust dependency needed now
+
+# Error Handling (Optional but recommended)
+anyhow = "1.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Templating (If serving HTML directly from Axum)
+# askama = { version = "0.12", features = ["with-axum"] } # Example using Askama
+
+reqwest = { version = "0.12", features = ["json"] }
+
+plotters = "0.3" # Check for the latest version
+plotters-bitmap = "0.3" # Add the bitmap backend crate
