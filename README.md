@@ -147,5 +147,3 @@ Une fois la base de données configurée et le frontend compilé :
 ```
 
 ---
-
-*(Ce README est une suggestion basée sur l'analyse du projet. N'hésitez pas à le modifier et à l'améliorer !)* 
