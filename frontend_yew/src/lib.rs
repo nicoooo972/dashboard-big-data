@@ -1,10 +1,10 @@
 use yew::prelude::*;
 use wasm_bindgen::prelude::*;
 use gloo_net::http::Request;
-use serde::Deserialize; // Pour dériver Deserialize
-use wasm_bindgen_futures::spawn_local; // Pour exécuter des futures
-use gloo_utils::document; // Ajout de l'import pour document
-use gloo_console; // Ajout de l'import pour la macro error!
+use serde::Deserialize;
+use wasm_bindgen_futures::spawn_local; 
+use gloo_utils::document;
+use gloo_console;
 
 // Structure pour désérialiser la réponse JSON de l'API
 #[derive(Clone, PartialEq, Deserialize, Debug)]
@@ -24,7 +24,6 @@ pub struct FareEfficiencyStats {
     pub avg_fare_per_minute: f64,
 }
 
-// Nouveau composant pour afficher l'efficacité tarifaire
 #[function_component(FareEfficiencyDisplay)]
 fn fare_efficiency_display() -> Html {
     let stats_state = use_state(|| None::<FareEfficiencyStats>);
@@ -74,12 +73,12 @@ fn fare_efficiency_display() -> Html {
     }
 }
 
-// Renommer DurationStatsApp en DashboardWidgetsApp ou similaire
-// et faire en sorte qu'il appelle les deux composants d'affichage.
-// ... Modification à venir pour DurationStatsApp ...
+// Renommer DurationStatsApp en DashboardWidgetsApp
+// et faire en sorte qu'il appelle les deux composants d'affichage
+// Modifi à venir pour DurationStatsApp
 
 // Notre composant racine pour les statistiques de durée (MAINTENANT WIDGETS)
-#[function_component(DashboardWidgetsApp)] // RENOMMÉ
+#[function_component(DashboardWidgetsApp)] 
 fn dashboard_widgets_app() -> Html {
     // État pour stocker les statistiques de durée récupérées
     let duration_stats_state = use_state(|| None::<TripDurationStats>);
